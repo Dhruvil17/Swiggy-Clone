@@ -59,7 +59,7 @@ const Body = () => {
     ) : (
         <div className="mt-24 p-4 font-sans">
             <div className="flex mx-[7.5rem] p-4">
-                {/* <input
+                <input
                     data-testid="searchInput"
                     className="m-4 px-4 py-2 border border-solid border-black text-center rounded-lg"
                     type="text"
@@ -68,8 +68,8 @@ const Body = () => {
                     onChange={(event) => {
                         setSearchRestaurant(event.target.value);
                     }}
-                /> */}
-                {/* <button
+                />
+                <button
                     className="my-4 mx-10 px-8 py-2 bg-green-400 rounded-lg hover:bg-green-500"
                     onClick={() => {
                         const filteredList = listOfRestaurants.filter(
@@ -81,8 +81,8 @@ const Body = () => {
                         setFilteredRestaurant(filteredList);
                     }}>
                     Search
-                </button> */}
-                {/* <div className="m-4 px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                </button>
+                <div className="m-4 px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
                     <button
                         className=""
                         onClick={() => {
@@ -93,7 +93,7 @@ const Body = () => {
                         }}>
                         Top Rated Restaurants
                     </button>
-                </div> */}
+                </div>
             </div>
 
             <div className="flex flex-wrap justify-center mx-10">
