@@ -16,6 +16,27 @@ const Body = () => {
     const fetchListOfRestaurants = useFetchRestaurants();
     const onlineStatus = useOnlineStatus();
 
+    const handleClick = async () => {
+        // const fetchData = await fetch(
+        //     "https://www.swiggy.com/dapi/restaurants/list/update",
+        //     {
+        //         method: "POST",
+        //         body: JSON.stringify({
+        //             lat: "23.080354194346093",
+        //             lng: "72.53391958773136",
+        //             nextOffset: "CJhlELQ4KIDguc2lhvzEYjCnEzgD",
+        //             page_type: "DESKTOP_WEB_LISTING",
+        //             filters: {},
+        //             _csrf: "M7cLJLEx33Qy--uQdaU7wZP8IiL6Kr4_BLCyvUKY",
+        //         }),
+        //         mode: "no-cors",
+        //     }
+        // );
+        // const data = await fetchData.json();
+        // console.log(data);
+        console.log("");
+    };
+
     useEffect(() => {
         if (fetchListOfRestaurants) {
             setListOfRestaurants(fetchListOfRestaurants);
@@ -38,7 +59,7 @@ const Body = () => {
     ) : (
         <div className="mt-24 p-4 font-sans">
             <div className="flex mx-[7.5rem] p-4">
-                <input
+                {/* <input
                     data-testid="searchInput"
                     className="m-4 px-4 py-2 border border-solid border-black text-center rounded-lg"
                     type="text"
@@ -47,9 +68,9 @@ const Body = () => {
                     onChange={(event) => {
                         setSearchRestaurant(event.target.value);
                     }}
-                />
-                <button
-                    className="my-4 mx-10 px-8 py-2 bg-green-200 rounded-lg hover:bg-green-300"
+                /> */}
+                {/* <button
+                    className="my-4 mx-10 px-8 py-2 bg-green-400 rounded-lg hover:bg-green-500"
                     onClick={() => {
                         const filteredList = listOfRestaurants.filter(
                             (restaurant) =>
@@ -60,8 +81,8 @@ const Body = () => {
                         setFilteredRestaurant(filteredList);
                     }}>
                     Search
-                </button>
-                <div className="m-4 px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                </button> */}
+                {/* <div className="m-4 px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
                     <button
                         className=""
                         onClick={() => {
@@ -72,7 +93,7 @@ const Body = () => {
                         }}>
                         Top Rated Restaurants
                     </button>
-                </div>
+                </div> */}
             </div>
 
             <div className="flex flex-wrap justify-center mx-10">
@@ -88,7 +109,7 @@ const Body = () => {
                 ))}
             </div>
             <div className="flex justify-center p-4 my-4 bg-green-400 hover:bg-green-500 hover:cursor-pointer rounded-lg w-2/12 m-auto">
-                <button>Show More Restaurants</button>
+                <button onClick={handleClick}>Show More Restaurants</button>
             </div>
         </div>
     );
